@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Gallery | Kids Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="brand">🧸 Kids Gallery</div>
+    <p class="tagline">Little Styles, Big Smiles!</p>
+    <div class="header-actions">
+      <input id="search" type="search" placeholder="Search clothes..." aria-label="Search clothes">
+      <button class="cart-button" onclick="showCart()">🛒 Cart (<span id="count">0</span>)</button>
+    </div>
+  </header>
+
+  <nav class="filters" aria-label="Product categories">
+    <button class="filter active" onclick="filterProducts('All', this)">All</button>
+    <button class="filter" onclick="filterProducts('Boys', this)">Boys</button>
+    <button class="filter" onclick="filterProducts('Girls', this)">Girls</button>
+    <button class="filter" onclick="filterProducts('Baby', this)">Baby</button>
+  </nav>
+
+  <main class="container">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">MADE FOR LITTLE MOMENTS</p>
+        <h1>Our Collection</h1>
+      </div>
+      <p class="collection-note">Cute, comfy styles for ages 1–6 years</p>
+    </div>
+    <div id="products" class="products" aria-live="polite"></div>
+
+    <section id="cart" class="cart" hidden>
+      <div class="cart-heading">
+        <h2>Your Shopping Cart</h2>
+        <button class="close-button" onclick="hideCart()" aria-label="Close cart">✕</button>
+      </div>
+      <div id="cartItems"></div>
+      <div class="cart-total"><span>Total</span><strong>₹<span id="total">0</span></strong></div>
+      <button class="primary-button" onclick="checkout()">Place Demo Order</button>
+      <p class="small-note">Demo only — no payment or real order is processed.</p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Kids Gallery</strong>
+    <p>Little Styles, Big Smiles!</p>
+    <small>© 2026 Kids Gallery. Demo shopping website.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
